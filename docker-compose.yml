@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: canteen_db
+    restart: always
+    environment:
+      POSTGRES_USER: canteen_user
+      POSTGRES_PASSWORD: canteen_pass
+      POSTGRES_DB: canteen_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - canteen_pgdata:/var/lib/postgresql/data
+
+volumes:
+  canteen_pgdata:
