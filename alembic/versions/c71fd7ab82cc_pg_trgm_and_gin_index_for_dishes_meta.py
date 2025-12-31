@@ -21,10 +21,8 @@ depends_on: Union[str, Sequence[str], None] = None
 def upgrade() -> None:
     op.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm;")
     #op.execute("CREATE INDEX IF NOT EXISTS ix_dishes_meta_trgm ON dishes USING gin ((meta::text) gin_trgm_ops);")
-    pass
 
 
 def downgrade() -> None:
     #op.execute("DROP INDEX IF EXISTS ix_dishes_meta_trgm;")
     op.execute("DROP EXTENSION IF EXISTS pg_trgm;")
-    pass
