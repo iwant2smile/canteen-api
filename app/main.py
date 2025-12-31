@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.core.db import ping_db
+from app.api.router import api_router
 
 app = FastAPI(title="Canteen API")
 
@@ -11,3 +12,5 @@ def health():
 def health_db():
     ok = ping_db()
     return {"db": "ok" if ok else "down"}
+
+app.include_router(api_router)
