@@ -8,7 +8,7 @@ services:
       POSTGRES_PASSWORD: canteen_pass
       POSTGRES_DB: canteen_db
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - canteen_pgdata:/var/lib/postgresql/data
 
