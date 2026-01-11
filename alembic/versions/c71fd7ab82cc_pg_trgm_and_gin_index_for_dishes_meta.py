@@ -1,7 +1,7 @@
 """pg_trgm and gin index for dishes meta
 
 Revision ID: c71fd7ab82cc
-Revises: e15415ebfa02
+Revises: cd245050036c
 Create Date: 2025-12-31 21:21:24.763687
 
 """
@@ -13,7 +13,7 @@ import sqlalchemy as sa
 
 # revision identifiers, used by Alembic.
 revision: str = 'c71fd7ab82cc'
-down_revision: Union[str, Sequence[str], None] = 'e15415ebfa02'
+down_revision: Union[str, Sequence[str], None] = 'cd245050036c'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 
